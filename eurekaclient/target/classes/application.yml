@@ -1,0 +1,12 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: provider
+eureka:
+  client:
+    service-url:
+      defalutZone: http://localhost:8010/eureka/
+#  是否将当前ip注册到eureka
+  instance:
+    prefer-ip-address: true

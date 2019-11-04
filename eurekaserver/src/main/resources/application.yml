@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: shcEurekaServer
+
+server:
+  port: 8761
+
+# register-with-eureka： 是否将当前的Eureka server 服务作为客户端注册
+# fetch-registry 是否获取其它Eureka Server 服务的数据
+# service-url.defaultZone:注册中心的访问地址
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#server:
+#  #  服务器端口
+#  port: 8761
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    #   服务器端不注册eureka(默认true)
+#    registerWithEureka: false
+#    #   服务器端不需要抓取服务列表(默认true)
+#    fetchRegistry: false
+#    #   注册url(配置之后报错Reached through: #include "navbar.ftl"  [in template "eureka/status.ftl" at line 22, column 7])
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#spring:
+#  application:
+#    #   注册服务名
+#    name: sisqp-eureka
